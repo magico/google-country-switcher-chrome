@@ -1,0 +1,22 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/Icon16.png",
+      "default_popup": "popup.html",
+      "default_title": "Click to see more actions"
+   },
+   "description": "Search Google on different countries. Based on RedFly's SEO Global extension.",
+   "icons": {
+      "128": "icons/Icon128.png",
+      "48": "icons/Icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDh4d6/7KRDFTBSr+lxIyA3zW2veV/QlgoF2a5E6lhBnlFxVRyodqNh0yqfjUVEmLQ4DIWIYkH/2mtkLwBR0AI8IN1AyJ6woOxytYTQlWyGb0NRbVkoecwbJudXd9/mZrJzKL8naWQu6WeNlt3mC+XbR4J3km8TDhvMR8rRTZmZ+QIDAQAB",
+   "manifest_version": 2,
+   "name": "Google Country Switcher",
+   "options_page": "options/options.html",
+   "permissions": [ "tabs", "contextMenus" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "5.1"
+}

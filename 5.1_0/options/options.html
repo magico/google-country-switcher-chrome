@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Google Country Switcher - Options</title>
+		
+		<link href="style.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+	
+	<!--and here is the center-screen div-->
+	<div class="centered">
+		<table style="background-color: white;border-bottom: 1px solid #828177">
+			<tr>
+				<td>
+					<div id="buttonOptions" class="tab-button-selected">
+						<img src="../icons/Options.png"/><br/>
+						Options
+					</div>
+				</td>
+				<td style="width: 100%">
+					<div id="buttonAbout" class="tab-button-normal">
+						<img src="../icons/About.png"/><br/>
+						About
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div class="main-container">
+			<div id="page-options">
+				<p class="header-description">Google Country Switcher</p>
+
+				<div id="optionsTable">
+					<p class="caption">
+						Preferences
+					</p>
+
+					<table>
+						<tr>
+							<td><label><input id="gglobal.openNewTab" type="checkbox"/>Open global search results in a new
+								tab</label>
+							</td>
+							<td><label><input id="gglobal.defaultLanguage" onchange="updateLanguageControls(event);"
+											  type="checkbox"/>Please select your default language</label>
+								<input id="gglobal.languageCode" type="text" maxlength="2" size="4"/>
+							</td>
+						</tr>
+						<tr>
+							<td><label><input id="gglobal.personalized" type="checkbox"/>De-personalize Google search
+								results</label>
+							</td>
+							<td><label>
+								<input id="gglobal.turnOnAdTest" type="checkbox"/>Turn On AdTest (Does not generate AdWords
+								impressions or clicks)</label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+							<td><label>
+								<input id="gglobal.enableLocalSearch" onchange="updateLocalSearchControls(event);"
+									   type="checkbox"/>Enable Local Search</label>
+								<input id="gglobal.tbZipCode" type="text" maxlength="8" size="10"/>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="current-searches">
+					<p class="caption">
+						Current Google Global Searches
+					</p>
+					<table id="searches-table" border="1" rules="all" cellspacing="0" cellpadding="4" width="100%">
+						<thead>
+						<tr>
+							<th>Name</th>
+							<th>Extension</th>
+							<th>Region ID</th>
+							<th>Country Code</th>
+							<th>Intl. City Code</th>
+							<th>US Zip Code</th>
+							<th>IP Address</th>
+							<th>Advanced Options</th>
+						</tr>
+						</thead>
+					</table>
+
+					<!-- Button container -->
+					<table>
+						<tr>
+							<td>
+								<input id="upButton" type="button" value="&nbsp;&nbsp;&nbsp;Up&nbsp;&nbsp;&nbsp;"
+									   disabled="true" />
+							</td>
+							<td style="width: 100%">
+								<input id="downButton" type="button" value="&nbsp;&nbsp;Down&nbsp;&nbsp;" disabled="true" />
+							</td>
+							<td style="width: 100%">
+								<input id="addNewSearch" type="button" value="Add New Search" />
+							</td>
+							<td style="width: 100%">
+								<input id="editButton" type="button" value="Edit Selected Search" disabled="true"/>
+							</td>
+							<td style="width: 100%">
+								<input id="deleteButton" type="button" value="Delete Selected Search" disabled="true"/>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="edit-search">
+					<p class="caption">
+						Add/Edit Search
+					</p>
+					<table cellspacing="0" cellpadding="4" width="100%">
+						<tr>
+							<td>Name</td>
+							<td><input id="editName" type="text"/></td>
+							<td>(Enter a name for this custom Google search)</td>
+						</tr>
+						<tr>
+							<td>Extension</td>
+							<td><input id="editExtension" type="text"/></td>
+							<td>(Google domain extension, i.e. .com , .ca , .de , .co.uk etc.)</td>
+						</tr>
+						<tr>
+							<td>Region ID</td>
+							<td><input id="editRegionId" type="text"/></td>
+							<td>(You may enter Region Code here. Example: US-CA)
+							</td>
+						</tr>
+						<tr>
+							<td>Country Code</td>
+							<td><input id="editCountryCode" type="text"/></td>
+							<td>(You may enter 2-letter country code here, i.e. CA, DE, UK, etc.)</td>
+						</tr>
+						<tr>
+							<td>Intl. City Code</td>
+							<td><input id="editCityCode" type="text"/></td>
+							<td>(You may enter City Code here. Example: 1006094 for Paris, France)
+							</td>
+						</tr>
+						<tr>
+							<td>US ZIP Code</td>
+							<td><input id="editZipCode" type="text"/></td>
+							<td>(You may enter an US zip code here, i.e. 90210)</td>
+						</tr>
+						<tr>
+							<td>IP Address</td>
+							<td><input id="editIpAddress" type="text"/></td>
+							<td>(You may enter an IP address here, i.e. 11.220.33.144)</td>
+						</tr>
+						<tr>
+							<td>Advanced Options</td>
+							<td><input id="editAdvancedOptions" type="text"/></td>
+							<td>(You may enter some advanced options here, i.e. &amp;hl=es.</td>
+						</tr>
+					</table>
+
+					<br>
+
+					<!-- Button container -->
+					<table align="center">
+						<tr>
+							<td>
+								<input id="addButton" type="button" value="Add" />
+							</td>
+							<td>
+								<input id="cancelButton" type="button" value="Cancel" />
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<p id="close-button-container" align="center">
+					<button class="saveOptions">&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;</button>
+					<button class="closeOptions">&nbsp;&nbsp;&nbsp;Close&nbsp;&nbsp;&nbsp;</button>
+				</p>
+			</div>
+
+			<div id="page-about">
+				<p class="header-description">Google Country Switcher</p>
+
+				<p>
+					This extension allows you to get Google search results from different countries, regions, cities and US
+					zip
+					codes</p>
+
+				<p align="center">
+					<button class="saveOptions">&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;</button>
+					<button class="closeOptions">&nbsp;&nbsp;&nbsp;Close&nbsp;&nbsp;&nbsp;</button>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>

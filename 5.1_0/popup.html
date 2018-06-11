@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			body {
+				width: 170px;
+				margin: 0; padding: 2px 2px 3px 2px;
+				background: #fff;
+			}
+
+			.item {
+				padding: 3px 3px 3px 30px;
+				
+				cursor: pointer;
+				background-color: #fff;
+				background-repeat: no-repeat;
+				background-position: 7px center;
+				
+				border: 1px solid #fff;
+				border-radius: 2px;
+				
+				font-family: Arial, serif;
+				font-size: 12px;
+				
+				-webkit-transition: border-color .2s ease-out;
+			}
+			
+			.item.norm { padding: 3px; }
+
+			.item:hover {
+				border-color: #69c;
+				background-color: #eef;
+				outline: 0;
+			}
+		</style>
+
+		<script type="text/javascript" src="popup_script.js"></script>
+	</head>
+	
+	<body>
+		<div id="separator" style="background: #999; height: 1px; margin: 7px 0;"></div>
+		
+		<div class="item norm" id="openAll">Open all in new tabs</div>
+		<div class="item norm" id="showOptions">Show Options...</div>
+	</body>
+	
+</html>

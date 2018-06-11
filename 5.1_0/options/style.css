@@ -1,0 +1,74 @@
+html, body { margin: 0; padding: 0; text-shadow: 0px 1px 0px #FFFFFF; }
+
+/*this is what we want the div to look like*/
+div.centered {
+    display: block;
+    margin: 10px;
+    background: #F7F7F7;
+    border: 1px solid #ddd;
+    font-family: Arial, serif;
+    font-size: 12px;
+    
+}
+
+div.main-container {
+    padding: 10px;
+}
+
+div.tab-button-selected {
+    text-align: center;
+    width: 48px;
+    padding: 4px;
+    cursor: default;
+    background-color: #C1D2EE;
+}
+
+div.tab-button-normal {
+    text-align: center;
+    width: 48px;
+    padding: 4px;
+    cursor: default;
+}
+
+div.tab-button-normal:hover {
+    background-color: #E0E8F6;
+}
+
+.header-description {
+    font-weight: bold;
+}
+
+.caption {
+    width: 100%;
+    border-bottom: 1px solid #828177;
+}
+
+#page-about {
+    display: none;
+}
+
+#edit-search {
+    display: none;
+}
+
+#searches-table {
+    cursor: default;
+    border: 1px solid #7F9DB9;
+}
+
+#searches-table th{
+    background: #F7F7F7;
+}
+
+/*#searches-table-body {*/
+/*background-color: white;*/
+/*}*/
+
+.selected-row {
+	font-weight: bold;
+	background-color: #D0E2FF;
+}
+
+.normal-row {
+    background-color: white;
+}
